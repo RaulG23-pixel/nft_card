@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft_blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main_bg: hsl(217, 54%, 11%);
+  --card_bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --psize: 18px;
+  --ffamily: "Outfit";
+  --light_weight: 300;
+  --medium_weight: 400;
+  --big_weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ffamily);
+  background: var(--main_bg);
+}
+main {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.card {
+  max-width: 330px;
+  background: var(--card_bg);
+  height: 553px;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0px 18px 2px 22px rgba(0, 0, 0, 0.046);
+}
+.card__image {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  text-decoration: none;
+  display: block;
+}
+.card__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+.card__image::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.3s ease;
+}
+.card__image:hover::after {
+  background: hsla(178, 100%, 50%, 0.3);
+}
+.card__data {
+  padding: 15px 0 23px 0;
+  border-bottom: 1px solid var(--line);
+}
+.card__data h3 {
+  color: var(--white);
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  font-weight: var(--big_weight);
+  transition: all 0.3s ease;
+}
+.card__data h3:hover {
+  color: var(--cyan);
+}
+.card__data p {
+  color: var(--soft_blue);
+  font-size: 16px;
+  font-weight: var(--light_weight);
+  margin-bottom: 24px;
+}
+.flex__container {
+  display: flex;
+  justify-content: space-between;
+}
+.crypto__price {
+  color: var(--cyan);
+}
+
+.date__indicator {
+  color: var(--soft_blue);
+}
+.flex__container span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon {
+  margin-right: 6px;
+}
+.card__footer {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.avatar {
+  width: 34px;
+  margin-right: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--soft_blue);
+}
+
+.card__footer span {
+  color: var(--soft_blue);
+  font-size: 15px;
+}
+.author {
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+.author:hover {
+  color: var(--cyan);
+}
